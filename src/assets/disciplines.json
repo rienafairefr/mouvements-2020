@@ -1,0 +1,178 @@
+[
+    {
+      "code": "C0071",
+      "name": "ENSEIGNANT 1ER DEGRE SPECIALISE"
+    },
+    {
+      "code": "C0072",
+      "name": "ENSEIGNANT 1D EDUCATION SPECIALISEE"
+    },
+    {
+      "code": "C0075",
+      "name": "ENSEIGNANT PREMIER DEGRE RESEAU REUSSITE"
+    },
+    {
+      "code": "G0000",
+      "name": "SANS SPECIALITE"
+    },
+    {
+      "code": "G0107",
+      "name": "ENFANTS DU VOYAGE"
+    },
+    {
+      "code": "G0135",
+      "name": "CHARGES DES AIDES SPECIALISES A DOMINANTE PEDAGOGIQUE (EX-OPTION E)"
+    },
+    {
+      "code": "G0137",
+      "name": "CHARGES DE L'ENSEIGNEMENT ET DE L'AIDE PEDAGOGIQUE AUPRES DES ELEVES, DES ETABLISSEMENTS, ET SECTIONS D'ENSEIGNEMENT GENERAL ET PROFESSIONNEL ADAPTE (EX-OPTION F)"
+    },
+    {
+      "code": "G0139",
+      "name": "CHARGES DE L'ENSEIGNEMENT ET DE L'AIDE PEDAGOGIQUE AUX ELEVES SOURDS ET MALENTENDANTS (EX-OPTION A)"
+    },
+    {
+      "code": "G0141",
+      "name": "CHARGES DE L'ENSEIGNEMENT ET DE L'AIDE PEDAGOGIQUE AUX ELEVES AVEUGLES OU MALVOYANTS (EX-OPTION B)"
+    },
+    {
+      "code": "G0143",
+      "name": "CHARGES DE L'ENSEIGNEMENT ET DE L'AIDE PEDAGOGIQUE AUX ELEVES PRESENTANT UNE DEFICIENCE MOTRICE GRAVE OU UN TROUBLE DE LA SANTE EVOLUANT SUR UNE LONGUE PERIODE ET:OU INVALIDANT (EX-OPTION C)"
+    },
+    {
+      "code": "G0145",
+      "name": "CHARGES DE L'ENSEIGNEMENT ET DE L'AIDE PEDAGOGIQUE AUX ELEVES PRESENTANT DES TROUBLES IMPORTANTS DES FONCTIONS COGNITIVES (EX-OPTION D)"
+    },
+    {
+      "code": "G0149",
+      "name": "CHARGES DES AIDES SPECIALISES A DOMINANTE RE-EDUCATIVE (EX-OPTION G)"
+    },
+    {
+      "code": "G0163",
+      "name": "ACCUEIL PRIMO ARRIVANTS"
+    },
+    {
+      "code": "G0164",
+      "name": "TECHNOLOGIES ET RESSOURCES EDUCATIVES"
+    },
+    {
+      "code": "G0191",
+      "name": "CLASSE D'APPLICATION"
+    },
+    {
+      "code": "G0201",
+      "name": "COORDINATION ZEP"
+    },
+    {
+      "code": "G0202",
+      "name": "COORDINATION REP"
+    },
+    {
+      "code": "G0400",
+      "name": "LANGUE VIVANTE ETRANGERE"
+    },
+    {
+      "code": "G0431",
+      "name": "NEERLANDAIS"
+    },
+    {
+      "code": "P0001",
+      "name": "1 CLASSE"
+    },
+    {
+      "code": "P0002",
+      "name": "2 CLASSES"
+    },
+    {
+      "code": "P0003",
+      "name": "3 CLASSES"
+    },
+    {
+      "code": "P0004",
+      "name": "4 CLASSES"
+    },
+    {
+      "code": "P0005",
+      "name": "5 CLASSES"
+    },
+    {
+      "code": "P0006",
+      "name": "6 CLASSES"
+    },
+    {
+      "code": "P0007",
+      "name": "7 CLASSES"
+    },
+    {
+      "code": "P0008",
+      "name": "8 CLASSES"
+    },
+    {
+      "code": "P0009",
+      "name": "9 CLASSES"
+    },
+    {
+      "code": "P0010",
+      "name": "10 CLASSES"
+    },
+    {
+      "code": "P0011",
+      "name": "11 CLASSES"
+    },
+    {
+      "code": "P0012",
+      "name": "12 CLASSES"
+    },
+    {
+      "code": "P0013",
+      "name": "13 CLASSES"
+    },
+    {
+      "code": "P0014",
+      "name": "14 CLASSES"
+    },
+    {
+      "code": "P0015",
+      "name": "15 CLASSES"
+    },
+    {
+      "code": "P0016",
+      "name": "16 CLASSES"
+    },
+    {
+      "code": "P0017",
+      "name": "17 CLASSES"
+    },
+    {
+      "code": "P0018",
+      "name": "18 CLASSES"
+    },
+    {
+      "code": "P0019",
+      "name": "19 CLASSES"
+    },
+    {
+      "code": "P001G",
+      "name": "ETABLISSEMENT SPECIALISE CLASSE UNIQUE"
+    },
+    {
+      "code": "P0020",
+      "name": "20 CLASSES"
+    },
+    {
+      "code": "P0021",
+      "name": "21 CLASSES"
+    },
+    {
+      "code": "P0022",
+      "name": "22 CLASSES"
+    },
+    {
+      "code": "P0023",
+      "name": "23 CLASSES"
+    },
+    {
+      "code": "P002G",
+      "name": "ETABLISSEMENT SPECIALISE 2 A 4 CLASSES"
+    }
+  ]
