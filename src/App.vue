@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{map_window}}
     <label for="sigle-select">SIGLE</label>
     <select id="sigle-select" v-model="sigle" class="my-select">
       <option v-for="sigle in sigles" :key="sigle">{{sigle}}</option>
@@ -11,9 +10,10 @@
     </select>
     <label for="discipline-select">DISCIPLINE</label>
     <select id="discipline-select" v-model="discipline" class="my-select">
-      <option v-for="discipline in disciplines" :key="discipline.code">{{discipline.code}}: {{discipline.name}}</option>
+      <option v-for="discipline in disciplines" :key="discipline.code" :value="discipline.code">{{discipline.code}}: {{discipline.name}}</option>
     </select>
-    <v-map ref="map" :zoom=13 :center="[50.6333, 3.0667]" style="width: 1024px; height: 800px;">
+    <v-map ref="map" :zoom=13 :center="[50.6333, 3.0667]" style="width: 1024px; height: 800px;"
+           v-on:update:zoom="update" v-on:update:center="update" v-on:update:bounds="update">
       <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
       <v-marker v-for="mouv in mouvements" :lat-lng="[mouv.geo.lat, mouv.geo.lng]" v-bind:key="mouv['N\u00b0POSTE']"
       @l-add="$event.target.openPopup()">
@@ -35,12 +35,15 @@ export default {
       sigles: require('@/assets/sigles.json'),
       circonscriptions: require('@/assets/circonscriptions.json'),
       disciplines: require('@/assets/disciplines.json'),
+      regroupements: require('@/assets/regroupements.json'),
       sigle: null,
       circonscription: null,
       discipline: null,
+      bounds: {},
     }
   },
   mounted () {
+    this.update()
     this.circonscriptions.sort(e => e.name)
     this.disciplines.sort()
     let disciplines_map = new Map(this.disciplines.map(i => [i.code, i.name]));
@@ -49,25 +52,28 @@ export default {
     }
   },
   computed: {
-    map_window () {
-      return this.$refs.map
-    },
     mouvements () {
       return this.data_mouvements
-      .filter(m => m.geo && m.geo.lat && m.geo.lng)
-      .filter(m => this.sigle ? m.SIGLE === this.sigle : true)
-      .filter(m => this.circonscription ? m.CIRCONSCRIPTION === this.circonscription : true)
-      .filter(m => this.discipline ? m.DISCIPLINE.code === this.discipline : true)
-    },
-    regroupements () {
-      return require('@/assets/regroupements.json')
+        .filter(m => m.geo && m.geo.lat && m.geo.lng)
+        .filter(m => this.bounds && this.bounds.southWest ? m.geo.lat >= this.bounds.southWest.lat && m.geo.lat <= this.bounds.northEast.lat : true)
+        .filter(m => this.bounds && this.bounds.northEast ? m.geo.lng >= this.bounds.southWest.lng && m.geo.lng <= this.bounds.northEast.lat : true)
+        .filter(m => this.sigle ? m.SIGLE === this.sigle : true)
+        .filter(m => this.circonscription ? m.CIRCONSCRIPTION === this.circonscription : true)
+        .filter(m => this.discipline ? m.DISCIPLINE.code === this.discipline : true)
     }
+  },
+  methods: {
+    update () {
+      this.bounds = this.$refs.map.mapObject.getBounds()
+    },
   }
 }
 </script>
 
 <style>
 @import "~leaflet/dist/leaflet.css";
+
+.leaflet-fade-anim .leaflet-tile,.leaflet-zoom-anim .leaflet-zoom-animated { will-change:auto !important; }
 .my-select {
   max-width: 200px;
 }
