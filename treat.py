@@ -3,7 +3,7 @@ import json
 import googlemaps
 
 
-gmaps = googlemaps.Client(key='AIzaSyB_1xuZiTbpyOs9-8r14spgzCm8P-Cj_XM')
+gmaps = googlemaps.Client(key=os.environ.get('GOOGLE_API_KEY'))
 
 
 data = json.load(open('src/assets/mouvements.json', 'r'))
