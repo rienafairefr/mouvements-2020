@@ -3921,11 +3921,9 @@
         "SUPPORT": "0119",
         "DISCIPLINE": "P0004",
         "CIRCONSCRIPTION": "DUNKERQUE-BERGUES",
-        "lat": 50.8467316,
-        "lng": 4.3524138,
         "geo": {
-            "lat": 50.8467316,
-            "lng": 4.3524138
+            "lat": 50.928224,
+            "lng": 2.330436
         }
     },
     {
