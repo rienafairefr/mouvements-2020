@@ -1,0 +1,170 @@
+[
+    {
+      "code": "0119",
+      "name": "DIRECTEUR ECOLE ELEMENTAIRE"
+    },
+    {
+      "code": "0121",
+      "name": "DIRECTEUR ECOLE MATERNELLE"
+    },
+    {
+      "code": "0128",
+      "name": "DIRECTEUR ECOLE APPLICATION ELEMENTAIRE"
+    },
+    {
+      "code": "0130",
+      "name": "DIRECTEUR  ECOLE APPLICATION MATERNELLE"
+    },
+    {
+      "code": "0132",
+      "name": "DIRECTEUR  ETAB SPECIALISE"
+    },
+    {
+      "code": "0190",
+      "name": "DIR. ECOLE ELEM. +3 CLASSES SPECIALISEES"
+    },
+    {
+      "code": "1DRR",
+      "name": "ENSEIGNANT PREMIER DEGRE RESEAU REUSSITE"
+    },
+    {
+      "code": 2557,
+      "name": "REMPLACEMENT STAGE FORMATION CONTINUE"
+    },
+    {
+      "code": 2584,
+      "name": "TITULAIRE REMPLACANT ZIL"
+    },
+    {
+      "code": 2585,
+      "name": "TITULAIRE REMPLACANT BRIGADE REP+"
+    },
+    {
+      "code": 2592,
+      "name": "REMPLT CONGES AIDE SPECIALISEE AUX HAND."
+    },
+    {
+      "code": 9010,
+      "name": "TITULAIRE SECTEUR"
+    },
+    {
+      "code": "ACAS",
+      "name": "ANIMATEUR CASNAV"
+    },
+    {
+      "code": "AINF",
+      "name": "ENSEIGNANT REFERENT POUR LES USAGES DU NUMERIQUE"
+    },
+    {
+      "code": "ASOU",
+      "name": "ANIMATION SOUTIEN"
+    },
+    {
+      "code": "CHA",
+      "name": "ULIS HANDICAP AUDITIF"
+    },
+    {
+      "code": "CHME",
+      "name": "ULIS HANDICAP MENTAL"
+    },
+    {
+      "code": "CLR",
+      "name": "CLASSE RELAIS"
+    },
+    {
+      "code": "CPAP",
+      "name": "CONSEILLER PEDAGOGIQUE ARTS VISUELS"
+    },
+    {
+      "code": "CPC",
+      "name": "CONSEILLER PEDAGOGIQUE IEN (1D)"
+    },
+    {
+      "code": "CPEM",
+      "name": "CONSEILLER PEDAGOGIQUE EDUCATION MUSICAL"
+    },
+    {
+      "code": "CPEP",
+      "name": "CONSEILLER PEDAGOGIQUE POUR L'EPS"
+    },
+    {
+      "code": "CPLV",
+      "name": "CONSEILLER PEDAG. LANGUES VIVANTES ETRN"
+    },
+    {
+      "code": "CPTI",
+      "name": "CONSEILLER PEDAG. ENS NUM"
+    },
+    {
+      "code": "DCOM",
+      "name": "COMPENSATION DECHARGE DIRECTEUR"
+    },
+    {
+      "code": "EAPL",
+      "name": "ENSEIGNANT CLASSE APPLICATION ELEMENTAIR"
+    },
+    {
+      "code": "EAPM",
+      "name": "ENSEIGNANT CLASSE APPLICATION PREELEMENT"
+    },
+    {
+      "code": "ECEL",
+      "name": "ENSEIGNANT CLASSE ELEMENTAIRE"
+    },
+    {
+      "code": "ECMA",
+      "name": "ENSEIGNANT CLASSE PREELEMENTAIRE"
+    },
+    {
+      "code": "ECSP",
+      "name": "ENSEIGNANT CLASSE SPECIALISEE"
+    },
+    {
+      "code": "EDRP",
+      "name": "EDUCATEUR ERPD"
+    },
+    {
+      "code": "IEEL",
+      "name": "UNIT PEDAGO ELEVE ALLOPHONE"
+    },
+    {
+      "code": "IS",
+      "name": "ENSEIGNANT 1D SPECIALISE DE COLLEGES"
+    },
+    {
+      "code": "ISES",
+      "name": "ENSEIGNANT 1D SEGPA"
+    },
+    {
+      "code": "ISIN",
+      "name": "ENSEIGNANT 1D EDUCATEUR INTERNAT"
+    },
+    {
+      "code": "MDPH",
+      "name": "ENSEIGNANT 1E DEGRE MAD MDPH"
+    },
+    {
+      "code": "MGHR",
+      "name": "MAITRE RASED DOMINANTE RELATIONNELLE HORS RESEAU"
+    },
+    {
+      "code": "MGR",
+      "name": "MAITRE RASED DOMINANTE RELATIONNELLE"
+    },
+    {
+      "code": "REF",
+      "name": "ENSEIGNANT 1E DEGRE REFERENT"
+    },
+    {
+      "code": "RGA",
+      "name": "MAITRE RASED DOMINANTE PEDAGOGIQUE"
+    },
+    {
+      "code": "SESD",
+      "name": "POSTE SERVICE ENS SUIVI A DOMICILE"
+    },
+    {
+      "code": "UPI",
+      "name": "UNITE LOCALISEE INCLUSION SCOLAIRE EN COLLEGE"
+    }
+  ]
