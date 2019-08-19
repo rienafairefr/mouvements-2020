@@ -1,10 +1,12 @@
 <template>
-  <div>
-    <label for="sigle-select">SIGLE</label>
-    <select id="sigle-select" v-model="sigle" class="my-select">
-      <option :value="undefined">--ALL--</option>
-      <option v-for="sigle in sigles" :key="sigle">{{sigle}}</option>
-    </select>
+  <div class="container">
+    <div class="row">
+      <label class="form-control-label" for="sigle-select">SIGLE</label>
+      <select class="form-control" id="sigle-select" v-model="sigle">
+        <option :value="undefined">--ALL--</option>
+        <option v-for="sigle in sigles" :key="sigle">{{sigle}}</option>
+      </select>
+    </div>
     <label for="circonscription-select">CIRCONSCRIPTION</label>
     <select id="circonscription-select" v-model="circonscription" class="my-select">
       <option :value="undefined">--ALL--</option>
@@ -25,7 +27,7 @@
       <option :value="undefined">--ALL--</option>
       <option v-for="support in supports" :key="support.code" :value="support.code">{{support.code}}: {{support.name}}</option>
     </select>
-    <v-map ref="map" :zoom=13 :center="[50.6333, 3.0667]" style="width: 1024px; height: 800px;"
+    <v-map ref="map" :zoom=13 :center="[50.6333, 3.0667]" style="width: 600px; height: 600px;"
            v-on:update:zoom="update" v-on:update:center="update" v-on:update:bounds="update">
       <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
       <v-marker v-for="mouv in mouvements" :lat-lng="[mouv.geo.lat, mouv.geo.lng]" v-bind:key="mouv['N\u00b0POSTE']"
