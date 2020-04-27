@@ -1,24 +1,29 @@
 import json
+import os
 
 import googlemaps
+from dotenv import load_dotenv
+from googlemaps.geocoding import geocode
 
+load_dotenv()
 
 gmaps = googlemaps.Client(key=os.environ.get('GOOGLE_API_KEY'))
 
 
-data = json.load(open('src/assets/mouvements.json', 'r'))
+with open('src/assets/mouvements.json', 'r') as mouvements_json:
+    mouvements = json.load(mouvements_json)
 
-for d in data:
-    if 'geo' not in d:
-        geocode_result = gmaps.geocode(d['ADRESSE'] + ' ' + d['COMMUNE'] + ' FRANCE')
+    for mouvement in mouvements:
+        if 'geocode' not in mouvement:
+            mouvement['geocode'] = geocode(gmaps, mouvement['ADRESSE'] + ' ' + mouvement['COMMUNE'], region='fr')
+        geocode_result = mouvement['geocode']
         print(geocode_result)
-        if len(geocode_result) >= 1:
-            d['geo'] = geocode_result[0]['geometry']['location']
-    else:
-        if d['geo']['lat'] is None or d['geo']['lng'] is None:
-            pass
+        if 'geo' not in mouvement:
+            if len(geocode_result) >= 1:
+                mouvement['geo'] = geocode_result[0]['geometry']['location']
+        else:
+            if mouvement['geo']['lat'] is None or mouvement['geo']['lng'] is None:
+                pass
 
-
-# json.dump(data, open('src/assets/mouvements.json', 'w'), indent=4)
-
-
+with open('src/assets/mouvements.json', 'w') as mouvements_json:
+    json.dump(mouvements, open('src/assets/mouvements.json', 'w'), indent=4)

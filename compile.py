@@ -1,9 +1,8 @@
 import json
 
-mouvements = json.load(open('src/assets/mouvements.json', 'r'))
-
-sigles = list({m['SIGLE'] for m in mouvements})
-circonscriptions = list({m['CIRCONSCRIPTION'] for m in mouvements})
-
-json.dump(sigles, open('src/assets/sigles.json', 'w'))
-json.dump(circonscriptions, open('src/assets/circonscriptions.json', 'w'))
+with open('src/assets/mouvements.json', 'r') as mouvements_json, \
+        open('src/assets/sigles.json', 'w') as sigles_json, \
+        open('src/assets/circonscriptions.json', 'w') as circonscriptions_json:
+    mouvements = json.load(mouvements_json)
+    json.dump(list({m['SIGLE'] for m in mouvements}), sigles_json, indent=2)
+    json.dump(list({m['CIRCONSCRIPTION'] for m in mouvements}), circonscriptions_json, indent=2)

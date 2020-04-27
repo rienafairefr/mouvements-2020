@@ -7,26 +7,34 @@
         <option v-for="sigle in sigles" :key="sigle">{{sigle}}</option>
       </select>
     </div>
-    <label for="circonscription-select">CIRCONSCRIPTION</label>
-    <select id="circonscription-select" v-model="circonscription" class="my-select">
-      <option :value="undefined">--ALL--</option>
-      <option v-for="circonscription in circonscriptions" :key="circonscription">{{circonscription}}</option>
-    </select>
-    <label for="discipline-select">DISCIPLINE</label>
-    <select id="discipline-select" v-model="discipline" class="my-select">
-      <option :value="undefined">--ALL--</option>
-      <option v-for="discipline in disciplines" :key="discipline.code" :value="discipline.code">{{discipline.code}}: {{discipline.name}}</option>
-    </select>
-    <label for="regroupement-select">REGROUPEMENT</label>
-    <select id="regroupement-select" v-model="regroupement" class="my-select">
-      <option :value="undefined">--ALL--</option>
-      <option v-for="regroupement in regroupements" :key="regroupement.name" :value="regroupement.name">{{regroupement.name}}</option>
-    </select>
-    <label for="support-select">SUPPORT</label>
-    <select id="support-select" v-model="support" class="my-select">
-      <option :value="undefined">--ALL--</option>
-      <option v-for="support in supports" :key="support.code" :value="support.code">{{support.code}}: {{support.name}}</option>
-    </select>
+    <div class="row">
+      <label for="circonscription-select">CIRCONSCRIPTION</label>
+      <select id="circonscription-select" v-model="circonscription" class="my-select">
+        <option :value="undefined">--ALL--</option>
+        <option v-for="circonscription in circonscriptions" :key="circonscription">{{circonscription}}</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="discipline-select">DISCIPLINE</label>
+      <select id="discipline-select" v-model="discipline" class="my-select">
+        <option :value="undefined">--ALL--</option>
+        <option v-for="discipline in disciplines" :key="discipline.code" :value="discipline.code">{{discipline.code}}: {{discipline.name}}</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="regroupement-select">REGROUPEMENT</label>
+      <select id="regroupement-select" v-model="regroupement" class="my-select">
+        <option :value="undefined">--ALL--</option>
+        <option v-for="regroupement in regroupements" :key="regroupement.name" :value="regroupement.name">{{regroupement.name}}</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="support-select">SUPPORT</label>
+      <select id="support-select" v-model="support" class="my-select">
+        <option :value="undefined">--ALL--</option>
+        <option v-for="support in supports" :key="support.code" :value="support.code">{{support.code}}: {{support.name}}</option>
+      </select>
+    </div>
     <v-map ref="map" :zoom=13 :center="[50.6333, 3.0667]" style="width: 600px; height: 600px;"
            v-on:update:zoom="update" v-on:update:center="update" v-on:update:bounds="update">
       <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
