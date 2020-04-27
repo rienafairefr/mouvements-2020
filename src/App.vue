@@ -35,10 +35,17 @@
         <option v-for="support in supports" :key="support.code" :value="support.code">{{support.code}}: {{support.name}}</option>
       </select>
     </div>
+    <div class="row">
+      <label for="observation-select">OBSERVATIONS</label>
+      <select id="observation-select" v-model="observation" class="my-select">
+        <option :value="undefined">--ALL--</option>
+        <option v-for="observation in observations" :key="observation" :value="observation">{{observation}}</option>
+      </select>
+    </div>
     <v-map ref="map" :zoom=13 :center="[50.6333, 3.0667]" style="width: 600px; height: 600px;"
            v-on:update:zoom="update" v-on:update:center="update" v-on:update:bounds="update">
       <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
-      <v-marker v-for="mouv in mouvements" :lat-lng="[mouv.geo.lat, mouv.geo.lng]" v-bind:key="mouv['N\u00b0POSTE']"
+      <v-marker v-for="mouv in filtered_mouvements" :lat-lng="[mouv.geo.lat, mouv.geo.lng]" v-bind:key="mouv['N\u00b0POSTE']"
       @l-add="$event.target.openPopup()">
         <v-popup :content="`POSTE ${mouv['N\u00b0POSTE']}<br>${yaml.dump(mouv).replace(/\ /g,'&nbsp;').replace(/(?:\r\n|\r|\n)/g, '<br>')}`"></v-popup>
       </v-marker>
@@ -47,6 +54,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'app',
   components: {
@@ -54,48 +63,69 @@ export default {
   data () {
     return {
       yaml: require('js-yaml'),
-      data_mouvements: require('@/assets/mouvements.json'),
-      sigles: require('@/assets/sigles.json'),
-      circonscriptions: require('@/assets/circonscriptions.json'),
-      disciplines: require('@/assets/disciplines.json'),
-      regroupements: require('@/assets/regroupements.json'),
-      supports: require('@/assets/supports.json'),
+      baseUrl: process.env.VUE_APP_BASE_URL,
+      mouvements: [],
+      sigles: [],
+      circonscriptions: [],
+      disciplines: [],
+      regroupements: [],
+      supports: [],
+      observationsValues: [],
       sigle: undefined,
       regroupement: undefined,
       circonscription: undefined,
       discipline: undefined,
       support: undefined,
+      observations: undefined,
       bounds: {},
     }
   },
   mounted () {
     this.update()
+    this.fetchData()
     this.circonscriptions.sort(e => e.name)
     this.disciplines.sort()
+    this.observationsValues = [... new Set(this.mouvements.map(mouv => mouv.OBSERVATIONS))];
     let disciplines_map = new Map(this.disciplines.map(i => [i.code, i.name]));
-    for (let mouv of this.data_mouvements) {
+    for (let mouv of this.mouvements) {
       mouv.DISCIPLINE = {code: mouv.DISCIPLINE, name: disciplines_map.get(mouv.DISCIPLINE) }
     }
     let regroupement_map = new Map()
     this.regroupements.forEach(i => i.cities.forEach( c => { regroupement_map.set(c, i.name)}))
-    for (let mouv of this.data_mouvements) {
+    for (let mouv of this.mouvements) {
       mouv.REGROUPEMENT = regroupement_map.get(mouv.COMMUNE)
     }
   },
   computed: {
-    mouvements () {
-      return this.data_mouvements
+    filtered_mouvements () {
+      return this.mouvements
         .filter(m => m.geo && m.geo.lat && m.geo.lng)
         .filter(m => this.bounds && this.bounds.southWest ? m.geo.lat >= this.bounds.southWest.lat && m.geo.lat <= this.bounds.northEast.lat : true)
         .filter(m => this.bounds && this.bounds.northEast ? m.geo.lng >= this.bounds.southWest.lng && m.geo.lng <= this.bounds.northEast.lat : true)
         .filter(m => this.sigle ? m.SIGLE === this.sigle : true)
         .filter(m => this.circonscription ? m.CIRCONSCRIPTION === this.circonscription : true)
+        .filter(m => this.observations ? m.OBSERVATIONS === this.observations : true)
         .filter(m => this.discipline ? m.DISCIPLINE.code === this.discipline : true)
         .filter(m => this.regroupement ? m.REGROUPEMENT === this.regroupement : true)
         .filter(m => this.support ? m.SUPPORT === this.support : true)
     }
   },
   methods: {
+    fetch (name) {
+      axios.get(`/json/${name}.json`).then(response => {
+        this[name] = response.data
+      })
+    },
+    async fetchData() {
+      await Promise.all([
+        this.fetch('mouvements'),
+        this.fetch('sigles'),
+        this.fetch('circonscriptions'),
+        this.fetch('disciplines'),
+        this.fetch('regroupements'),
+        this.fetch('supports')
+      ])
+    },
     update () {
       this.bounds = this.$refs.map.mapObject.getBounds()
     },

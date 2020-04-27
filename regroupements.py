@@ -25,9 +25,9 @@ with open('Liste_geo.csv') as liste_geo_csv:
                 {'name': geo['REGROUPEMENTS'], 'circonscriptions': circonscriptions, 'cities': cities}
             )
 
-    with open('src/assets/mouvements_geo.json', 'w') as mouvements_geo_json:
+    with open('public/mouvements_geo.json', 'w') as mouvements_geo_json:
         json.dump(list_geo, mouvements_geo_json, indent=2)
 
 
-with open('src/assets/regroupements.json', 'w') as regroupements_json:
+with open('public/regroupements.json', 'w') as regroupements_json:
     json.dump(regroupements, regroupements_json, indent=2)

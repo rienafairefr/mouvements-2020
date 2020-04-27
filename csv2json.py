@@ -17,5 +17,5 @@ with open('Liste.csv') as liste:
         new_datum['N°POSTE'] = int(new_datum['N°POSTE'])
         data.append(new_datum)
 
-with open(os.path.join('src', 'assets', 'mouvements.json'), 'w') as mouvements_json_file:
+with open('public/mouvements.json"', 'w') as mouvements_json_file:
     json.dump(data, mouvements_json_file, indent=2)
