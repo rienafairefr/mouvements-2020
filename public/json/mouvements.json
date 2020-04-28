@@ -108201,7 +108201,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "VALENCIENNES-BRUAY",
-        "OBSERVATIONS": "9006",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.41462929999999,
             "lng": 3.5598263
@@ -108219,7 +108219,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "VALENCIENNES-BRUAY",
-        "OBSERVATIONS": "9008",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.3951558,
             "lng": 3.5931928
@@ -108237,7 +108237,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "VALENCIENNES-CONDE",
-        "OBSERVATIONS": "9010",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.4344514,
             "lng": 3.5775927
@@ -108255,7 +108255,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0201",
         "CIRCONSCRIPTION": "VALENCIENNES-DENAIN",
-        "OBSERVATIONS": "9014",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.3412167,
             "lng": 3.3766343
@@ -108273,7 +108273,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "VALENCIENNES-ESCAUDAIN",
-        "OBSERVATIONS": "9016",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.3065714,
             "lng": 3.3860735
@@ -108291,7 +108291,7 @@
         "SUPPORT": "UEE",
         "DISCIPLINE": "G0176",
         "CIRCONSCRIPTION": "AVESNES/VALENCIENNES-ASH",
-        "OBSERVATIONS": "9018",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.4716864,
             "lng": 3.6113054
@@ -108309,7 +108309,7 @@
         "SUPPORT": "UEE",
         "DISCIPLINE": "G0176",
         "CIRCONSCRIPTION": "AVESNES/VALENCIENNES-ASH",
-        "OBSERVATIONS": "9020",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.3710661,
             "lng": 3.4539212
@@ -108327,7 +108327,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "VALENCIENNES-ANZIN",
-        "OBSERVATIONS": "9022",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.3258427,
             "lng": 3.3925593
@@ -108345,7 +108345,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "VALENCIENNES-ESCAUDAIN",
-        "OBSERVATIONS": "9030",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.3258427,
             "lng": 3.3925593
@@ -108363,7 +108363,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "VALENCIENNES-CENTRE",
-        "OBSERVATIONS": "9032",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.3428573,
             "lng": 3.5178278
@@ -108381,7 +108381,7 @@
         "SUPPORT": "CPTI",
         "DISCIPLINE": "G0000",
         "CIRCONSCRIPTION": "DOUAI-CENTRE",
-        "OBSERVATIONS": "9102",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.3750864,
             "lng": 3.0681425
@@ -108399,7 +108399,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "DOUAI-CENTRE",
-        "OBSERVATIONS": "9106",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.3932403,
             "lng": 3.0872766
@@ -108417,7 +108417,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "DOUAI-CUINCY",
-        "OBSERVATIONS": "9108",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.4148991,
             "lng": 3.0542196
@@ -108435,7 +108435,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "DOUAI-WAZIERS",
-        "OBSERVATIONS": "9110",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.3858112,
             "lng": 3.1550877
@@ -108453,7 +108453,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "CAMBRAI-LE CATEAU",
-        "OBSERVATIONS": "9112",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.103942,
             "lng": 3.544235
@@ -108471,7 +108471,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "DOUAI-WAZIERS",
-        "OBSERVATIONS": "9114",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.3750864,
             "lng": 3.0681425
@@ -108489,7 +108489,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "DOUAI-CANTIN",
-        "OBSERVATIONS": "9116",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.3219706,
             "lng": 3.2559936
@@ -108507,7 +108507,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "DOUAI-RIEULAY",
-        "OBSERVATIONS": "9118",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.37980220000001,
             "lng": 3.2538942
@@ -108525,7 +108525,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0201",
         "CIRCONSCRIPTION": "ROUBAIX-EST",
-        "OBSERVATIONS": "9202",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.7002342,
             "lng": 3.1788701
@@ -108543,7 +108543,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0201",
         "CIRCONSCRIPTION": "ROUBAIX-CENTRE",
-        "OBSERVATIONS": "9204",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6811507,
             "lng": 3.1794926
@@ -108561,7 +108561,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0201",
         "CIRCONSCRIPTION": "ROUBAIX-OUEST",
-        "OBSERVATIONS": "9206",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6888438,
             "lng": 3.2015216
@@ -108579,7 +108579,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "ROUBAIX-WATTRELOS",
-        "OBSERVATIONS": "9208",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.705884,
             "lng": 3.2348647
@@ -108597,7 +108597,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "TOURCOING-RONCQ",
-        "OBSERVATIONS": "9210",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.7373147,
             "lng": 3.1713259
@@ -108615,7 +108615,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "TOURCOING-OUEST",
-        "OBSERVATIONS": "9212",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.7373147,
             "lng": 3.1713259
@@ -108633,7 +108633,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "ROUBAIX-WASQUEHAL",
-        "OBSERVATIONS": "9214",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6744531,
             "lng": 3.0938007
@@ -108651,7 +108651,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "ROUBAIX-WATTRELOS",
-        "OBSERVATIONS": "9216",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.69778030000001,
             "lng": 3.2115832
@@ -108669,7 +108669,7 @@
         "SUPPORT": "RASE",
         "DISCIPLINE": "G0173",
         "CIRCONSCRIPTION": "ROUBAIX-WASQUEHAL",
-        "OBSERVATIONS": "9218",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.701319,
             "lng": 3.147819
@@ -108687,7 +108687,7 @@
         "SUPPORT": "IEEL",
         "DISCIPLINE": "G0163",
         "CIRCONSCRIPTION": "ROUBAIX-OUEST",
-        "OBSERVATIONS": "9220",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6847721,
             "lng": 3.2048819
@@ -108705,7 +108705,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "ROUBAIX-EST",
-        "OBSERVATIONS": "9222",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.670395,
             "lng": 3.1939441
@@ -108723,7 +108723,7 @@
         "SUPPORT": "SESD",
         "DISCIPLINE": "G0176",
         "CIRCONSCRIPTION": "ROUBAIX/TOURCOING-ASH",
-        "OBSERVATIONS": "9224",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6820645,
             "lng": 3.1662598
@@ -108741,7 +108741,7 @@
         "SUPPORT": "SESD",
         "DISCIPLINE": "G0176",
         "CIRCONSCRIPTION": "ROUBAIX/TOURCOING-ASH",
-        "OBSERVATIONS": "9226",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6875021,
             "lng": 3.1806176
@@ -108759,7 +108759,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "AVESNES-LE QUESNOY",
-        "OBSERVATIONS": "9302",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.2474167,
             "lng": 3.640140999999999
@@ -108777,7 +108777,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "AVESNES-MAUBEUGE",
-        "OBSERVATIONS": "9304",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.2784895,
             "lng": 3.9816639
@@ -108795,7 +108795,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "AVESNES-FOURMIES",
-        "OBSERVATIONS": "9306",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.0187612,
             "lng": 4.046552399999999
@@ -108813,7 +108813,7 @@
         "SUPPORT": "UEE",
         "DISCIPLINE": "G0176",
         "CIRCONSCRIPTION": "AVESNES/VALENCIENNES-ASH",
-        "OBSERVATIONS": "9308",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.0215633,
             "lng": 4.046826
@@ -108831,7 +108831,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "AVESNES-FOURMIES",
-        "OBSERVATIONS": "9312",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.0191431,
             "lng": 4.058482
@@ -108849,7 +108849,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "AVESNES-JEUMONT",
-        "OBSERVATIONS": "9314",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.288653,
             "lng": 4.046152999999999
@@ -108867,7 +108867,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0201",
         "CIRCONSCRIPTION": "AVESNES-MAUBEUGE",
-        "OBSERVATIONS": "9316",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.2890174,
             "lng": 3.9596825
@@ -108885,7 +108885,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "AVESNES-MAUBEUGE",
-        "OBSERVATIONS": "9318",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.273796,
             "lng": 3.977197
@@ -108903,7 +108903,7 @@
         "SUPPORT": "SESD",
         "DISCIPLINE": "G0176",
         "CIRCONSCRIPTION": "AVESNES/VALENCIENNES-ASH",
-        "OBSERVATIONS": "9320",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.1973464,
             "lng": 3.8411158
@@ -108921,7 +108921,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "LILLE1-HELLEMMES",
-        "OBSERVATIONS": "9406",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6277076,
             "lng": 3.064427
@@ -108939,7 +108939,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "LILLE1-CENTRE",
-        "OBSERVATIONS": "9408",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6277076,
             "lng": 3.064427
@@ -108957,7 +108957,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "LILLE1-LAMBERSART",
-        "OBSERVATIONS": "9412",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6277076,
             "lng": 3.064427
@@ -108975,7 +108975,7 @@
         "SUPPORT": "UEE",
         "DISCIPLINE": "G0176",
         "CIRCONSCRIPTION": "LILLE 1 / LILLE 3-ASH",
-        "OBSERVATIONS": "9416",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.690314,
             "lng": 3.112569
@@ -108993,7 +108993,7 @@
         "SUPPORT": "SESD",
         "DISCIPLINE": "G0176",
         "CIRCONSCRIPTION": "LILLE 1 / LILLE 3-ASH",
-        "OBSERVATIONS": "9418",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6410923,
             "lng": 3.1493076
@@ -109011,7 +109011,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "LILLE2-LOMME",
-        "OBSERVATIONS": "9504",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.63921149999999,
             "lng": 3.0152948
@@ -109029,7 +109029,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "LILLE2-LOOS",
-        "OBSERVATIONS": "9506",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6088666,
             "lng": 3.0070538
@@ -109047,7 +109047,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "LILLE3-SECLIN",
-        "OBSERVATIONS": "9508",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.5468828,
             "lng": 3.0277955
@@ -109065,7 +109065,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "LILLE3-VILLENEUVE D'ASCQ SUD",
-        "OBSERVATIONS": "9510",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6481548,
             "lng": 3.1321371
@@ -109083,7 +109083,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0202",
         "CIRCONSCRIPTION": "LILLE2-LOMME",
-        "OBSERVATIONS": "9512",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6338643,
             "lng": 3.0036074
@@ -109101,7 +109101,7 @@
         "SUPPORT": "UEE",
         "DISCIPLINE": "G0176",
         "CIRCONSCRIPTION": "DUNKERQUE/LILLE 2-ASH",
-        "OBSERVATIONS": "9514",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.65241899999999,
             "lng": 2.9710211
@@ -109119,7 +109119,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0201",
         "CIRCONSCRIPTION": "LILLE3-VILLENEUVE D'ASCQ NORD",
-        "OBSERVATIONS": "9516",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.6462791,
             "lng": 3.1059116
@@ -109137,7 +109137,7 @@
         "SUPPORT": "ASOU",
         "DISCIPLINE": "G0201",
         "CIRCONSCRIPTION": "DUNKERQUE-GRAVELINES",
-        "OBSERVATIONS": "9602",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 51.02084499999999,
             "lng": 2.313264
@@ -109155,7 +109155,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "DUNKERQUE-BAILLEUL",
-        "OBSERVATIONS": "9606",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.7184153,
             "lng": 2.5442797
@@ -109173,7 +109173,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "DUNKERQUE-BERGUES",
-        "OBSERVATIONS": "9608",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 51.0339207,
             "lng": 2.3774544
@@ -109191,7 +109191,7 @@
         "SUPPORT": "AINF",
         "DISCIPLINE": "G0164",
         "CIRCONSCRIPTION": "DUNKERQUE-CENTRE",
-        "OBSERVATIONS": "9610",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 51.0339207,
             "lng": 2.3774544
@@ -109209,7 +109209,7 @@
         "SUPPORT": "UEE",
         "DISCIPLINE": "G0176",
         "CIRCONSCRIPTION": "DUNKERQUE/LILLE 2-ASH",
-        "OBSERVATIONS": "9612",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 51.03481799999999,
             "lng": 2.3940483
@@ -109227,7 +109227,7 @@
         "SUPPORT": "UEM",
         "DISCIPLINE": "G0178",
         "CIRCONSCRIPTION": "DUNKERQUE/LILLE 2-ASH",
-        "OBSERVATIONS": "9616",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 50.72327569999999,
             "lng": 2.5357753
@@ -109245,7 +109245,7 @@
         "SUPPORT": "UEE",
         "DISCIPLINE": "G0171",
         "CIRCONSCRIPTION": "DUNKERQUE/LILLE 2-ASH",
-        "OBSERVATIONS": "9620",
+        "OBSERVATIONS": "jumel\u00e9",
         "geo": {
             "lat": 51.0469586,
             "lng": 2.389561800000001

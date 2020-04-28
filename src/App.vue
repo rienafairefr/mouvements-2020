@@ -1,10 +1,21 @@
 <template>
   <div class="container">
+    <div v-if="!loaded">
+      Loading...
+    </div>
+    <div v-else>
     <div class="row">
       <label class="form-control-label" for="sigle-select">SIGLE</label>
       <select class="form-control" id="sigle-select" v-model="sigle">
         <option :value="undefined">--ALL--</option>
         <option v-for="sigle in sigles" :key="sigle">{{sigle}}</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="nbVacants-select">nbVacants</label>
+      <select id="nbVacants-select" v-model="nbVacants" class="my-select">
+        <option :value="undefined">--ALL--</option>
+        <option v-for="nbVacants in nbVacantsValues" :key="nbVacants">{{nbVacants}}</option>
       </select>
     </div>
     <div class="row">
@@ -37,9 +48,9 @@
     </div>
     <div class="row">
       <label for="observation-select">OBSERVATIONS</label>
-      <select id="observation-select" v-model="observation" class="my-select">
+      <select id="observation-select" v-model="observations" class="my-select">
         <option :value="undefined">--ALL--</option>
-        <option v-for="observation in observations" :key="observation" :value="observation">{{observation}}</option>
+        <option v-for="observations in observationsValues" :key="observations" :value="observations">{{observations}}</option>
       </select>
     </div>
     <v-map ref="map" :zoom=13 :center="[50.6333, 3.0667]" style="width: 600px; height: 600px;"
@@ -50,6 +61,7 @@
         <v-popup :content="`POSTE ${mouv['N\u00b0POSTE']}<br>${yaml.dump(mouv).replace(/\ /g,'&nbsp;').replace(/(?:\r\n|\r|\n)/g, '<br>')}`"></v-popup>
       </v-marker>
     </v-map>
+    </div>
   </div>
 </template>
 
@@ -63,14 +75,11 @@ export default {
   data () {
     return {
       yaml: require('js-yaml'),
-      baseUrl: process.env.VUE_APP_BASE_URL,
       mouvements: [],
-      sigles: [],
-      circonscriptions: [],
-      disciplines: [],
       regroupements: [],
+      disciplines: [],
       supports: [],
-      observationsValues: [],
+      nbVacants: undefined,
       sigle: undefined,
       regroupement: undefined,
       circonscription: undefined,
@@ -78,53 +87,72 @@ export default {
       support: undefined,
       observations: undefined,
       bounds: {},
+      loaded: false,
     }
   },
   mounted () {
-    this.update()
     this.fetchData()
-    this.circonscriptions.sort(e => e.name)
-    this.disciplines.sort()
-    this.observationsValues = [... new Set(this.mouvements.map(mouv => mouv.OBSERVATIONS))];
-    let disciplines_map = new Map(this.disciplines.map(i => [i.code, i.name]));
-    for (let mouv of this.mouvements) {
-      mouv.DISCIPLINE = {code: mouv.DISCIPLINE, name: disciplines_map.get(mouv.DISCIPLINE) }
-    }
-    let regroupement_map = new Map()
-    this.regroupements.forEach(i => i.cities.forEach( c => { regroupement_map.set(c, i.name)}))
-    for (let mouv of this.mouvements) {
-      mouv.REGROUPEMENT = regroupement_map.get(mouv.COMMUNE)
-    }
   },
   computed: {
+    observationsValues () {
+      return [... new Set(this.mouvements.map(mouv => mouv.OBSERVATIONS))];
+    },
+    nbVacantsValues () {
+      return [... new Set(this.mouvements.map(mouv => mouv.nbVacants))];
+    },
+    sigles () {
+      return [... new Set(this.mouvements.map(mouv => mouv.SIGLE))];
+    },
+    circonscriptions () {
+      const array = [... new Set(this.mouvements.map(mouv => mouv.CIRCONSCRIPTION))]
+      array.sort(e => e.name);
+      return array;
+    },
     filtered_mouvements () {
       return this.mouvements
         .filter(m => m.geo && m.geo.lat && m.geo.lng)
-        .filter(m => this.bounds && this.bounds.southWest ? m.geo.lat >= this.bounds.southWest.lat && m.geo.lat <= this.bounds.northEast.lat : true)
-        .filter(m => this.bounds && this.bounds.northEast ? m.geo.lng >= this.bounds.southWest.lng && m.geo.lng <= this.bounds.northEast.lat : true)
+        .filter(this.inBounds)
+        .filter(m => m.nbVacant > 0)
         .filter(m => this.sigle ? m.SIGLE === this.sigle : true)
         .filter(m => this.circonscription ? m.CIRCONSCRIPTION === this.circonscription : true)
         .filter(m => this.observations ? m.OBSERVATIONS === this.observations : true)
         .filter(m => this.discipline ? m.DISCIPLINE.code === this.discipline : true)
         .filter(m => this.regroupement ? m.REGROUPEMENT === this.regroupement : true)
+        .filter(m => this.nbVacants ? m.nbVacants === this.nbVacants : true)
         .filter(m => this.support ? m.SUPPORT === this.support : true)
     }
   },
   methods: {
+    inBounds (m) {
+      return this.bounds && 
+      (this.bounds.southWest ? m.geo.lat >= this.bounds.southWest.lat && m.geo.lat <= this.bounds.northEast.lat : true) &&
+      (this.bounds.northEast ? m.geo.lng >= this.bounds.southWest.lng && m.geo.lng <= this.bounds.northEast.lat : true)
+    },
     fetch (name) {
-      axios.get(`/json/${name}.json`).then(response => {
+      return axios.get(`/json/${name}.json`).then(response => {
         this[name] = response.data
       })
     },
     async fetchData() {
       await Promise.all([
         this.fetch('mouvements'),
-        this.fetch('sigles'),
-        this.fetch('circonscriptions'),
-        this.fetch('disciplines'),
         this.fetch('regroupements'),
+        this.fetch('disciplines'),
         this.fetch('supports')
       ])
+      let disciplines_map = new Map(this.disciplines.map(i => [i.code, i.name]));
+      for (let mouv of this.mouvements) {
+        mouv.DISCIPLINE = { code: mouv.DISCIPLINE, name: disciplines_map.get(mouv.DISCIPLINE) }
+      }
+      for (let mouv of this.mouvements) {
+        mouv.nbVacants = new Number(mouv['Nb Postes Vacants'])
+      }
+      let regroupement_map = new Map()
+      this.regroupements.forEach(i => i.cities.forEach( c => { regroupement_map.set(c, i.name)}))
+      for (let mouv of this.mouvements) {
+        mouv.REGROUPEMENT = regroupement_map.get(mouv.COMMUNE)
+      }
+      this.loaded = true
     },
     update () {
       this.bounds = this.$refs.map.mapObject.getBounds()

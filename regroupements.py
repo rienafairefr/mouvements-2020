@@ -5,7 +5,7 @@ from csv import DictReader
 regroupements = []
 circonscriptions_map = {}
 
-with open('src/assets/mouvements.json') as mouvements_json:
+with open('public/json/mouvements.json') as mouvements_json:
     mouvements = json.load(mouvements_json)
     for mouvement in mouvements:
         circonscription = mouvement['CIRCONSCRIPTION']
@@ -25,9 +25,9 @@ with open('Liste_geo.csv') as liste_geo_csv:
                 {'name': geo['REGROUPEMENTS'], 'circonscriptions': circonscriptions, 'cities': cities}
             )
 
-    with open('public/mouvements_geo.json', 'w') as mouvements_geo_json:
+    with open('public/json/mouvements_geo.json', 'w') as mouvements_geo_json:
         json.dump(list_geo, mouvements_geo_json, indent=2)
 
 
-with open('public/regroupements.json', 'w') as regroupements_json:
+with open('public/json/regroupements.json', 'w') as regroupements_json:
     json.dump(regroupements, regroupements_json, indent=2)

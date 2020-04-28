@@ -1,6 +1,5 @@
 import csv
 import json
-import os
 
 with open('Liste.csv') as liste:
     reader = csv.DictReader(liste)
@@ -17,5 +16,5 @@ with open('Liste.csv') as liste:
         new_datum['N°POSTE'] = int(new_datum['N°POSTE'])
         data.append(new_datum)
 
-with open('public/mouvements.json"', 'w') as mouvements_json_file:
+with open('public/json/mouvements.json"', 'w') as mouvements_json_file:
     json.dump(data, mouvements_json_file, indent=2)

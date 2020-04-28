@@ -10,7 +10,7 @@ load_dotenv()
 gmaps = googlemaps.Client(key=os.environ.get('GOOGLE_API_KEY'))
 
 
-with open('public/mouvements.json', 'r') as mouvements_json:
+with open('public/json/mouvements.json', 'r') as mouvements_json:
     mouvements = json.load(mouvements_json)
 
     for mouvement in mouvements:
@@ -25,5 +25,5 @@ with open('public/mouvements.json', 'r') as mouvements_json:
             if mouvement['geo']['lat'] is None or mouvement['geo']['lng'] is None:
                 pass
 
-with open('public/mouvements.json', 'w') as mouvements_json:
+with open('public/json/mouvements.json', 'w') as mouvements_json:
     json.dump(mouvements, mouvements_json, indent=4)
