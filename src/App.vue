@@ -15,7 +15,7 @@
       <label for="nbVacants-select">nbVacants</label>
       <select id="nbVacants-select" v-model="nbVacants" class="my-select">
         <option :value="undefined">--ALL--</option>
-        <option v-for="nbVacants in nbVacantsValues" :key="nbVacants">{{nbVacants}}</option>
+        <option v-for="nbVacants in nbVacantsValues" :key="nbVacants" :value="nbVacants">{{nbVacants}}</option>
       </select>
     </div>
     <div class="row">
@@ -95,16 +95,16 @@ export default {
   },
   computed: {
     observationsValues () {
-      return [... new Set(this.mouvements.map(mouv => mouv.OBSERVATIONS))];
+      return [... new Set(this.filtered_mouvements.map(mouv => mouv.OBSERVATIONS))];
     },
     nbVacantsValues () {
-      return [... new Set(this.mouvements.map(mouv => mouv.nbVacants))];
+      return [... new Set(this.filtered_mouvements.map(mouv => mouv.nbVacants))].sort();
     },
     sigles () {
-      return [... new Set(this.mouvements.map(mouv => mouv.SIGLE))];
+      return [... new Set(this.filtered_mouvements.map(mouv => mouv.SIGLE))];
     },
     circonscriptions () {
-      const array = [... new Set(this.mouvements.map(mouv => mouv.CIRCONSCRIPTION))]
+      const array = [... new Set(this.filtered_mouvements.map(mouv => mouv.CIRCONSCRIPTION))]
       array.sort(e => e.name);
       return array;
     },
@@ -112,8 +112,7 @@ export default {
       return this.mouvements
         .filter(m => m.geo && m.geo.lat && m.geo.lng)
         .filter(this.inBounds)
-        .filter(m => m.nbVacant > 0)
-        .filter(m => this.sigle ? m.SIGLE === this.sigle : true)
+        .filter(m => this.sigle? m.SIGLE === this.sigle:true)
         .filter(m => this.circonscription ? m.CIRCONSCRIPTION === this.circonscription : true)
         .filter(m => this.observations ? m.OBSERVATIONS === this.observations : true)
         .filter(m => this.discipline ? m.DISCIPLINE.code === this.discipline : true)
@@ -145,7 +144,7 @@ export default {
         mouv.DISCIPLINE = { code: mouv.DISCIPLINE, name: disciplines_map.get(mouv.DISCIPLINE) }
       }
       for (let mouv of this.mouvements) {
-        mouv.nbVacants = new Number(mouv['Nb Postes Vacants'])
+        mouv.nbVacants = parseInt(mouv['Nb Postes Vacants'])
       }
       let regroupement_map = new Map()
       this.regroupements.forEach(i => i.cities.forEach( c => { regroupement_map.set(c, i.name)}))
