@@ -95,7 +95,7 @@ export default {
   },
   computed: {
     observationsValues () {
-      return [... new Set(this._mouvements.map(mouv => mouv.OBSERVATIONS))];
+      return [... new Set(this.mouvements.map(mouv => mouv.OBSERVATIONS))];
     },
     nbVacantsValues () {
       return [... new Set(this.mouvements.map(mouv => mouv.nbVacants))].sort();
