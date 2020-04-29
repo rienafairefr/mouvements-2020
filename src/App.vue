@@ -53,7 +53,7 @@
         <option v-for="observations in observationsValues" :key="observations" :value="observations">{{observations}}</option>
       </select>
     </div>
-    <v-map ref="map" :zoom=13 :center="[50.6333, 3.0667]" style="width: 75%; height: 75%;"
+    <v-map ref="map" :zoom=13 :center="[50.6333, 3.0667]" style="width: 800px; height: 500px;"
            v-on:update:zoom="update" v-on:update:center="update" v-on:update:bounds="update">
       <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
       <v-marker v-for="mouv in filtered_mouvements" :lat-lng="[mouv.geo.lat, mouv.geo.lng]" v-bind:key="mouv['N\u00b0POSTE']"
