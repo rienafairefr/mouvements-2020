@@ -53,7 +53,7 @@
         <option v-for="observations in observationsValues" :key="observations" :value="observations">{{observations}}</option>
       </select>
     </div>
-    <v-map ref="map" :zoom=13 :center="[50.6333, 3.0667]" style="width: 50%; height: 600px;"
+    <v-map ref="map" :zoom=13 :center="[50.6333, 3.0667]" style="width: 75%; height: 75%;"
            v-on:update:zoom="update" v-on:update:center="update" v-on:update:bounds="update">
       <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
       <v-marker v-for="mouv in filtered_mouvements" :lat-lng="[mouv.geo.lat, mouv.geo.lng]" v-bind:key="mouv['N\u00b0POSTE']"
@@ -95,16 +95,16 @@ export default {
   },
   computed: {
     observationsValues () {
-      return [... new Set(this.filtered_mouvements.map(mouv => mouv.OBSERVATIONS))];
+      return [... new Set(this._mouvements.map(mouv => mouv.OBSERVATIONS))];
     },
     nbVacantsValues () {
-      return [... new Set(this.filtered_mouvements.map(mouv => mouv.nbVacants))].sort();
+      return [... new Set(this.mouvements.map(mouv => mouv.nbVacants))].sort();
     },
     sigles () {
-      return [... new Set(this.filtered_mouvements.map(mouv => mouv.SIGLE))];
+      return [... new Set(this.mouvements.map(mouv => mouv.SIGLE))];
     },
     circonscriptions () {
-      const array = [... new Set(this.filtered_mouvements.map(mouv => mouv.CIRCONSCRIPTION))]
+      const array = [... new Set(this.mouvements.map(mouv => mouv.CIRCONSCRIPTION))]
       array.sort(e => e.name);
       return array;
     },
@@ -112,7 +112,7 @@ export default {
       return this.mouvements
         .filter(m => m.geo && m.geo.lat && m.geo.lng)
         .filter(this.inBounds)
-        .filter(m => this.sigle? m.SIGLE === this.sigle:true)
+        .filter(m => this.sigle? m.SIGLE === this.sigle : true)
         .filter(m => this.circonscription ? m.CIRCONSCRIPTION === this.circonscription : true)
         .filter(m => this.observations ? m.OBSERVATIONS === this.observations : true)
         .filter(m => this.discipline ? m.DISCIPLINE.code === this.discipline : true)
